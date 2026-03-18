@@ -1,6 +1,14 @@
+@echo off
 :loop
+cls
+echo ========================================
+echo   Sincronizando POO con GitHub...
+echo ========================================
 git add .
-git commit -m "Auto-sync"
+git commit -m "Auto-sync: %date% %time%"
 git push origin main
-timeout /t 600
+echo.
+echo Operacion terminada. Proxima actualizacion en 1 hora.
+echo No cierres esta ventana si quieres que siga sincronizando.
+timeout /t 3600
 goto loop
