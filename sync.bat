@@ -2,7 +2,7 @@
 :loop
 cls
 echo ========================================
-echo   Sincronizando POO con GitHub...
+echo   Sincronizacion con GitHub...
 echo ========================================
 git add .
 git commit -m "Auto-sync: %date% %time%"
