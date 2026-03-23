@@ -39,6 +39,7 @@ public class TiendaOnline_LMDA {
                     Producto_LMDA p = inventario.buscarProducto(sku);
                     if (p == null) {
                         System.out.println("Producto No Encontrado");
+                        break;
                     }
                     System.out.println("Cantidad: ");
                     int cantidad = sc.nextInt();

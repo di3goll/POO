@@ -21,28 +21,29 @@ public class ItemInventario_LMDA {
     public Producto_LMDA getProducto() {
         return producto;
     }
-    
+
     public int getExistencias() {
         return existencias;
     }
-    
-    public void aumentar(int cantidad)
-    {
+
+    public void aumentar(int cantidad) {
         existencias += cantidad;
     }
-    public boolean disminuir(int cantidad)
-    {
-        if (existencias >= cantidad)
-        {
+
+    public boolean disminuir(int cantidad) {
+        if (existencias >= cantidad) {
             existencias -= cantidad;
             return true;
         }
         return false;
     }
-    
+
+    public double calcular() {
+        return producto.getPrecio() * existencias;
+    }
+
     @Override
-    public String toString()
-    {
+    public String toString() {
         return producto.toString() + " |Stock: " + existencias;
     }
 }
